@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { HistoricoProducto } from '../types/HistoricoProducto';
 
-const API_URL = 'http://localhost:3000/api/products';
+//const API_URL = 'http://localhost:3000/api/products';
+const API_URL = 'https://melbobackend.onrender.com/api/products'
 
 export const getHistoricoProductos = async (
   startDate?: string,

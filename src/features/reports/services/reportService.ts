@@ -1,8 +1,9 @@
 import { reportsAPI } from '../../../lib/api';
 import { Report, Sale } from '../types/Report';
 
-export const getCurrentReport = async (): Promise<Report> => {
-  return reportsAPI.getCurrentReport();
+export const getCurrentReport = async (ubicacion?: string): Promise<Report> => {
+  console.log(ubicacion);
+  return reportsAPI.getCurrentReport(ubicacion);
 };
 
 export const addSaleToReport = async (sale: Sale): Promise<void> => {

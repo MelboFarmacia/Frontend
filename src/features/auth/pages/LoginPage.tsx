@@ -4,12 +4,15 @@ import toast from 'react-hot-toast';
 import { LoginForm } from '../components/LoginForm';
 import { login } from '../services/authService';
 import fondoLogin from '../../../img/FondoLogin.png';
+import { useAuth } from '../context/AuthContext';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+
+  const { login: authLogin } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,8 +22,7 @@ export default function LoginPage() {
       const response = await login(email, password);
       
       if (response?.token) {
-        localStorage.setItem('token', response.token);
-        localStorage.setItem('role', response.role);
+        authLogin(response.token, response.role, response.ubicacion);
         toast.success('Inicio de sesión exitoso');
         navigate('/welcome');
       } else {

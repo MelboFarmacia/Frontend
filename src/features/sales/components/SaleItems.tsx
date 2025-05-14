@@ -9,6 +9,26 @@ interface SaleItemsProps {
 
 export default function SaleItems({ items, onRemoveItem, onUpdateQuantity }: SaleItemsProps) {
   const formatCurrency = (amount: number) => `Q${amount.toFixed(2)}`;
+  console.log(items);
+  const renderPromotionInfo = (item: SaleItem) => {
+    if (!item.promotion) return null;
+    
+    let promotionText = '';
+    if (item.promotion.type === 'NxM' && item.promotion.config) {
+      promotionText = `Lleva ${item.promotion.config.buyQuantity} y paga ${item.promotion.config.getQuantity}`;
+    } else if (item.promotion.type === 'percentage') {
+      promotionText = `${item.promotion.discountValue}% de descuento`;
+    } else if (item.promotion.type === 'fixed') {
+      promotionText = `Q${item.promotion.discountValue} de descuento fijo`;
+    }
+
+    return (
+      <div className="text-blue-600 text-sm">
+        <p><strong>Promoción aplicada:</strong> {item.promotion.name}</p>
+        <p>{promotionText}</p>
+      </div>
+    );
+  };
 
   return (
     <div className="mt-6">
@@ -35,6 +55,10 @@ export default function SaleItems({ items, onRemoveItem, onUpdateQuantity }: Sal
                       className="w-20 px-2 py-1 border rounded-md"
                     />
                   </div>
+                  {item?.discount > 0 && (
+                    <p className="text-green-600">Descuento: {item.discount}%</p>
+                  )}
+                  {renderPromotionInfo(item)}
                   <p className="font-medium">Subtotal: {formatCurrency(item.subtotal)}</p>
                 </div>
               </div>
@@ -58,6 +82,8 @@ export default function SaleItems({ items, onRemoveItem, onUpdateQuantity }: Sal
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Cantidad</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Tipo</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Precio</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Promoción</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Descuento</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Subtotal</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Acciones</th>
             </tr>
@@ -77,6 +103,21 @@ export default function SaleItems({ items, onRemoveItem, onUpdateQuantity }: Sal
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 capitalize">{item.saleType}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatCurrency(item.price)}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-600">
+                  {item.promotion ? (
+                    <div>
+                      <p>{item.promotion.name}</p>
+                      <p className="text-xs">
+                        {item.promotion.type === 'NxM' && item.promotion.config
+                          ? `${item.promotion.config.buyQuantity}x${item.promotion.config.getQuantity}`
+                          : `${item.promotion.discountValue}${item.promotion.type === 'percentage' ? '%' : 'Q'}`}
+                      </p>
+                    </div>
+                  ) : '-'}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-green-600">
+                  {item?.discount > 0 ? `${item.discount}%` : '-'}
+                </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatCurrency(item.subtotal)}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
                   <button

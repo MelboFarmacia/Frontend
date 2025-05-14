@@ -4,6 +4,7 @@ import { Product } from '../types/Product';
 import React from 'react';
 import { format } from 'date-fns';
 import { getProductTypes } from '../services/productService';
+import { ubicacionesAPI } from '../../../lib/api';
 
 interface EditProductModalProps {
   product: Product;
@@ -11,9 +12,17 @@ interface EditProductModalProps {
   onSubmit: (productId: string, productData: any) => void;
 }
 
+interface Ubicacion {
+  _id: string;
+  nombre: string;
+  direccion: string;
+  telefono: string;
+}
+
 export default function EditProductModal({ product, onClose, onSubmit }: EditProductModalProps) {
   const [availableTypes, setAvailableTypes] = useState<string[]>([]);
   const [types, setTypes] = useState<string[]>(product.types || []);
+  const [ubicaciones, setUbicaciones] = useState<Ubicacion[]>([]);
   const [purchasePrices, setPurchasePrices] = useState({
     unit: product.purchasePrices?.unit?.toString() || '',
     blister: product.purchasePrices?.blister?.toString() || '',
@@ -21,13 +30,19 @@ export default function EditProductModal({ product, onClose, onSubmit }: EditPro
   });
 
   useEffect(() => {
-    const fetchTypes = async () => {
+    const fetchData = async () => {
       try {
-        const types = await getProductTypes();
+        const [types, ubicacionesData] = await Promise.all([
+          getProductTypes(),
+          ubicacionesAPI.getUbicaciones()
+        ]);
         setAvailableTypes(types);
-      } catch (error) { }
+        setUbicaciones(ubicacionesData);
+      } catch (error) {
+        console.error('Error al cargar datos:', error);
+      }
     };
-    fetchTypes();
+    fetchData();
   }, []);
 
   const handleTypeSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -48,6 +63,7 @@ export default function EditProductModal({ product, onClose, onSubmit }: EditPro
     expirationDate: format(new Date(product.expirationDate), 'yyyy-MM-dd'),
     pharmaceuticalCompany: product.pharmaceuticalCompany as string,
     paymentType: product.paymentType as unknown as string,
+    location: product.location?._id || '',
     prices: {
       unit: product.prices.unit?.toString() || '',
       blister: product.prices.blister?.toString() || '',
@@ -498,6 +514,26 @@ export default function EditProductModal({ product, onClose, onSubmit }: EditPro
             >
               <option value="excento">Excento</option>
               <option value="gravado">Gravado</option>
+            </select>
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">
+              Ubicación
+            </label>
+            <select
+              name="location"
+              value={formData.location}
+              onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+              required
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            >
+              <option value="">Selecciona una ubicación...</option>
+              {ubicaciones.map((ubicacion) => (
+                <option key={ubicacion._id} value={ubicacion._id}>
+                  {ubicacion.nombre}
+                </option>
+              ))}
             </select>
           </div>
 

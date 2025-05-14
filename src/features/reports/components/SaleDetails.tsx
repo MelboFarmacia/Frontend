@@ -1,5 +1,6 @@
 import { Sale } from '../types/Report';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import React from 'react';
 import { useState } from 'react';
 
 interface SaleDetailsProps {

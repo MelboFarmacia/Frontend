@@ -3,8 +3,10 @@ import { useState, useEffect, useCallback } from 'react';
 import { Product } from '../types/Product';
 import { findProductByType, getProducts, getProductTypes } from '../services/productService';
 import { toast } from 'react-hot-toast';
+import { useAuth } from '../../../features/auth/context/AuthContext';
 
 export function useProducts() {
+  const { user } = useAuth();
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,7 +21,7 @@ export function useProducts() {
   const fetchProducts = useCallback(async () => {
     try {
       setLoading(true);
-      const fetchedProducts = await getProducts();
+      const fetchedProducts = await getProducts(user?.ubicacion);
       setProducts(fetchedProducts);
     } catch (error) {
       toast.error('Error al cargar los productos');

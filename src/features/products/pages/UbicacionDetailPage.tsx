@@ -17,10 +17,18 @@ interface Ubicacion {
 
 interface Producto {
   _id: string;
-  nombre: string;
-  codigo: string;
-  stock: number;
-  precio: number;
+  name: string;
+  barcode: string;
+  stock: {
+    units: number;
+    blisters: number;
+    boxes: number;
+  };
+  prices: {
+    unit: number;
+    blister: number;
+    box: number;
+  };
 }
 
 export default function UbicacionDetailPage() {
@@ -57,6 +65,7 @@ export default function UbicacionDetailPage() {
       navigate('/ubicaciones');
     }
   };
+  console.log(ubicacion);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -208,17 +217,25 @@ export default function UbicacionDetailPage() {
                 <tr className="bg-gray-50 border-b">
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Código</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stock</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Precio</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stock (Unidades)</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stock (Blisters)</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stock (Cajas)</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Precio Unidad</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Precio Blister</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Precio Caja</th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {currentProductos.map((producto) => (
                   <tr key={producto._id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap">{producto.codigo}</td>
-                    <td className="px-6 py-4 whitespace-nowrap">{producto.nombre}</td>
-                    <td className="px-6 py-4 whitespace-nowrap">{producto.stock}</td>
-                    <td className="px-6 py-4 whitespace-nowrap">${producto.precio}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{producto.barcode}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{producto.name}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{producto.stock.units}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{producto.stock.blisters}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{producto.stock.boxes}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{producto.prices.unit ? `${producto.prices.unit} Q` : '-'}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{producto.prices.blister ? `${producto.prices.blister} Q` : '-'}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{producto.prices.box ? `${producto.prices.box} Q` : '-'}</td>
                   </tr>
                 ))}
               </tbody>

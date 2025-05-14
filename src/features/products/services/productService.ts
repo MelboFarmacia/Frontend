@@ -2,8 +2,9 @@ import { api } from '../../../lib/api';
 import { toast } from 'react-hot-toast';
 import { Product } from '../types/Product';
 
-export const getProducts = async (): Promise<Product[]> => {
-  const response = await api.get('/products');
+export const getProducts = async (ubicacion?: string): Promise<Product[]> => {
+  const params = ubicacion ? { ubicacion } : {};
+  const response = await api.get('/products', { params });
   return response.data;
 };
 

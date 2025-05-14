@@ -168,6 +168,7 @@ export default function ProductsPage() {
           selectedTypes={selectedTypes}         
           onTypesChange={setSelectedTypes}     
           onTypeFilter={handleFilterByTypes}
+          sortOption={sortOption}
         />
 
         <ProductSearch

@@ -2,6 +2,7 @@ import { api } from '../../../lib/api';
 import { Product } from '../../../features/products/types/Product';
 import { SaleItem } from '../types/Sale';
 import toast from 'react-hot-toast';
+import { Promotion } from '../../promotions/types/Promotion';
 
 export const findProductByBarcodeService = async (barcode: string): Promise<Product> => {
   try {
@@ -48,6 +49,17 @@ export const registerSaleService = async (items: SaleItem[], total: number): Pro
     });
   } catch (error: any) {
     const message = error.response?.data?.message || 'Error al registrar la venta';
+    toast.error(message);
+    throw error;
+  }
+};
+
+export const getProductPromotions = async (productId: string): Promise<Promotion[]> => {
+  try {
+    const response = await api.get(`/promotions/promotion/${productId}`);
+    return response.data;
+  } catch (error: any) {
+    const message = error.response?.data?.message || 'Error al obtener promociones del producto';
     toast.error(message);
     throw error;
   }

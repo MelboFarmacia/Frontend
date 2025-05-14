@@ -11,23 +11,75 @@ import React from 'react';
 import HistoricoPage from './features/products/pages/HistoricoPage';
 import UbicacionDetailPage from './features/products/pages/UbicacionDetailPage';
 import { TransferView } from './features/products/components/TransferView';
+import PromotionsPage from './features/promotions/pages/PromotionsPage';
+import { AuthProvider } from './features/auth/context/AuthContext';
+import ProtectedRoute from './features/auth/components/ProtectedRoute';
+import UsersPage from './features/users/pages/UsersPage';
 function App() {
   return (
     <BrowserRouter>
-      <Toaster position="bottom-right" />
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/welcome" element={<Welcome />} />
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="/ubicaciones" element={<UbicacionesPage />} />
-        <Route path="/ubicaciones/:id" element={<UbicacionDetailPage />} />
-        <Route path="/sales" element={<SalesPage />} />
-        <Route path="/reports" element={<ReportsPage />} />
-        <Route path="/admin" element={<AdminPanel />} />
-        <Route path="/products/historico" element={<HistoricoPage />} />
-        <Route path="/transfer" element={<TransferView />} />
-        <Route path="/" element={<Navigate to="/login" replace />} />
-      </Routes>
+      <AuthProvider>
+        <Toaster position="bottom-right" />
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/welcome" element={
+            <ProtectedRoute>
+              <Welcome />
+            </ProtectedRoute>
+          } />
+          <Route path="/products" element={
+            <ProtectedRoute allowedRoles={['admin', 'admin_ubicacion', 'employee']}>
+              <ProductsPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/ubicaciones" element={
+            <ProtectedRoute allowedRoles={['admin']}>
+              <UbicacionesPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/ubicaciones/:id" element={
+            <ProtectedRoute allowedRoles={['admin']}>
+              <UbicacionDetailPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/sales" element={
+            <ProtectedRoute allowedRoles={['admin', 'admin_ubicacion', 'employee']} requireLocation={true}>
+              <SalesPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/reports" element={
+            <ProtectedRoute allowedRoles={['admin', 'admin_ubicacion', 'employee']} requireLocation={true}>
+              <ReportsPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/admin" element={
+            <ProtectedRoute allowedRoles={['admin', 'admin_ubicacion']}>
+              <AdminPanel />
+            </ProtectedRoute>
+          } />
+          <Route path="/products/historico" element={
+            <ProtectedRoute allowedRoles={['admin', 'admin_ubicacion']}>
+              <HistoricoPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/transfer" element={
+            <ProtectedRoute allowedRoles={['admin', 'admin_ubicacion']}>
+              <TransferView />
+            </ProtectedRoute>
+          } />
+          <Route path="/promotions" element={
+            <ProtectedRoute allowedRoles={['admin', 'admin_ubicacion', 'employee']} requireLocation={true}>
+              <PromotionsPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/users" element={
+            <ProtectedRoute allowedRoles={['admin', 'admin_ubicacion']}>
+              <UsersPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/" element={<Navigate to="/login" replace />} />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 }

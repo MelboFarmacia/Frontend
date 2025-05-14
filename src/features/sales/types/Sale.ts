@@ -5,8 +5,4118 @@ export interface SaleItem {
   price: number;
   quantity: number;
   saleType: 'unit' | 'blister' | 'box';
+  unitsPerSale: number;
   subtotal: number;
-  unitsPerSale: number; 
+  paymentType: string;
+  discount?: number;
+  promotion?: {
+    promotionId: string;
+    name: string;
+    type: string;
+    description: string;
+    config?: {
+      buyQuantity: number;
+      getQuantity: number;
+    } | null;
+    discountValue: number;
+  } | null;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
+  paymentType: string;
+}
+
+export interface Sale {
+  items: SaleItem[];
+  total: number;
   paymentType: string;
 }
 

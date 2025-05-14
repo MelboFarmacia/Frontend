@@ -7,26 +7,41 @@ import {
   markNotificationAsRead,
   createNotification 
 } from '../features/notifications/services/notificationService';
+import { useAuth } from '../features/auth/context/AuthContext';
 
 const LOW_STOCK_THRESHOLD = 10;
 const EXPIRATION_WARNING_MONTHS = 6;
 
 export function useNotifications() {
+  const { user } = useAuth();
   const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   const fetchNotifications = async () => {
     try {
+      if (!user?.ubicacion) {
+        setError('No hay ubicación seleccionada');
+        return;
+      }
       const notificationsData = await getNotifications();
       setNotifications(notificationsData);
-    } catch (error) {
-      console.error('Error al obtener notificaciones:', error);
+      setError(null);
+    } catch (error: any) {
+      const errorMessage = error?.message || 'Error al obtener notificaciones';
+      console.error('Error al obtener notificaciones:', errorMessage);
+      setError(errorMessage);
+      setNotifications([]);
     }
   };
 
   useEffect(() => {
     const checkProductsStatus = async () => {
       try {
-        const products = await getProducts();
+        if (!user?.ubicacion) {
+          setError('No hay ubicación seleccionada');
+          return;
+        }
+        const products = await getProducts(user.ubicacion);
         const today = new Date();
         const notificationPromises: Promise<Notification>[] = [];
         
@@ -71,8 +86,10 @@ export function useNotifications() {
         // Esperar a que todas las notificaciones se creen
         await Promise.all(notificationPromises);
         await fetchNotifications();
-      } catch (error) {
-        console.error('Error checking products status:', error);
+      } catch (error: any) {
+        const errorMessage = error?.message || 'Error al verificar el estado de los productos';
+        console.error('Error checking products status:', errorMessage);
+        setError(errorMessage);
       }
     };
 
@@ -93,6 +110,7 @@ export function useNotifications() {
   return {
     notifications,
     markAsRead: handleMarkAsRead,
-    unreadCount: notifications.filter(n => !n.read).length
+    unreadCount: notifications.filter(n => !n.read).length,
+    error
   };
 }

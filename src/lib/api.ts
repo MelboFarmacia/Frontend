@@ -1,8 +1,8 @@
 // src/lib/api.ts
 import axios, { AxiosError } from 'axios';
 
-//const BASE_URL = 'http://localhost:3000/api';
-const BASE_URL = 'https://melbobackend.onrender.com/api/'
+const BASE_URL = 'http://localhost:3000/api';
+//const BASE_URL = 'https://melbobackend.onrender.com/api/'
 
 export const api = axios.create({
   baseURL: BASE_URL,
@@ -38,8 +38,9 @@ export const authAPI = {
 
 // Products API
 export const productsAPI = {
-  getProducts: async () => {
-    const response = await api.get('/products');
+  getProducts: async (ubicacion?: string) => {
+    const params = ubicacion ? { ubicacion } : {};
+    const response = await api.get('/products', { params });
     return response.data;
   },
 
@@ -94,13 +95,16 @@ export const ubicacionesAPI = {
 
 // Reports API
 export const reportsAPI = {
-  getCurrentReport: async () => {
-    const response = await api.get('/reports/current');
+  getCurrentReport: async (ubicacion?: string) => {
+    console.log(ubicacion)
+    const params = ubicacion ? { ubicacion } : {};
+    const response = await api.get('/reports/current', { params });
     return response.data;
   },
 
-  getReportHistory: async () => {
-    const response = await api.get('/reports/history');
+  getReportHistory: async (ubicacion?: string) => {
+    const params = ubicacion ? { ubicacion } : {};
+    const response = await api.get('/reports/history', { params });
     return response.data;
   },
 

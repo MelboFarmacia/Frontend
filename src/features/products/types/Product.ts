@@ -36,4 +36,7 @@ export interface Product {
     blister: boolean;
     box: boolean;
   };
+  location: {
+      _id: any,
+  }
 }

@@ -11,11 +11,11 @@ export default function MainLayout({ children }: MainLayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navbar onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
-      <div className="flex">
+      <div className="flex flex-1 overflow-hidden">
         {/* Sidebar para desktop */}
-        <div className="hidden md:block">
+        <div className="hidden md:block w-64 flex-shrink-0">
           <Sidebar />
         </div>
 
@@ -28,13 +28,13 @@ export default function MainLayout({ children }: MainLayoutProps) {
               onClick={() => setIsSidebarOpen(false)}
             />
             {/* Sidebar móvil */}
-            <div className="fixed inset-y-0 left-0 z-30">
+            <div className="fixed inset-y-0 left-0 z-30 w-64">
               <Sidebar onClose={() => setIsSidebarOpen(false)} />
             </div>
           </div>
         )}
 
-        <main className="flex-1 p-4 md:p-8">
+        <main className="flex-1 p-4 md:p-8 overflow-auto min-w-0">
           {children}
         </main>
       </div>

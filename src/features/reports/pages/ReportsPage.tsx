@@ -6,6 +6,8 @@ import { getCurrentReport, getReportByDate, generatePDF, generateExcel, getRepor
 import { FileDown, FileSpreadsheet } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import React from 'react';
+import { useAuth } from '../../auth/context/AuthContext';
+import { ubicacionesAPI } from '../../../lib/api';
 
 export default function ReportsPage() {
   // Función auxiliar para obtener la fecha local
@@ -23,13 +25,39 @@ export default function ReportsPage() {
   const [endDate, setEndDate] = useState(getLocalDate());
   const [reportsByRange, setReportsByRange] = useState<Report[]>([]);
   const [isRangeMode, setIsRangeMode] = useState(false);
+  const [ubicaciones, setUbicaciones] = useState<{ _id: string; nombre: string }[]>([]);
+  const [selectedUbicacion, setSelectedUbicacion] = useState<string>('');
+  const { user } = useAuth();
+
+  const ubicacion = localStorage.getItem('ubicacion');
+  useEffect(() => {
+    if (ubicacion) {
+      setSelectedUbicacion(ubicacion);
+    }
+  }, [ubicacion]);
+  console.log(selectedUbicacion);
+
+  useEffect(() => {
+    if (user?.role === 'admin') {
+      loadUbicaciones();
+    }
+  }, [user]);
+
+  const loadUbicaciones = async () => {
+    try {
+      const data = await ubicacionesAPI.getUbicaciones();
+      setUbicaciones(data);
+    } catch (error) {
+      toast.error('Error al cargar ubicaciones');
+    }
+  };
 
   const loadReport = async (date: string) => {
     setIsLoading(true);
     setCurrentReport(null); // Reset the current report before loading new one
     try {
       const report = date === new Date().toISOString().split('T')[0]
-        ? await getCurrentReport()
+        ? await getCurrentReport(selectedUbicacion)
         : await getReportByDate(date);
       setCurrentReport(report);
     } catch (error: any) {
@@ -126,6 +154,23 @@ export default function ReportsPage() {
                   ? 'Reporte del Día'
                   : 'Reporte Histórico'}
             </h1>
+            {user?.role === 'admin' && (
+              <select
+                value={selectedUbicacion}
+                onChange={(e) => {
+                  setSelectedUbicacion(e.target.value);
+                  loadReport(selectedDate);
+                }}
+                className="px-3 py-2 border rounded-md"
+              >
+                <option value="">Todas las ubicaciones</option>
+                {ubicaciones.map((ubicacion) => (
+                  <option key={ubicacion._id} value={ubicacion._id}>
+                    {ubicacion.nombre}
+                  </option>
+                ))}
+              </select>
+            )}
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setIsRangeMode(false)}

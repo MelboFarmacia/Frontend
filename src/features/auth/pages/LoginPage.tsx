@@ -38,18 +38,25 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F3F4FF] flex items-center justify-center md:justify-end p-4 relative">
+    <div className="min-h-screen bg-[#F3F4FF] flex items-center justify-center relative overflow-hidden">
       {/* Left side - Image */}
-      <div className="absolute inset-x-0 bottom-0 w-full lg:w-[75%] z-0" style={{ marginBottom: '0' }}>
+      <div className="absolute inset-x-0 bottom-0 w-full lg:w-[55%] lg:left-0 z-0">
         <img 
           src={fondoLogin} 
           alt="Melbo animated image" 
-          className="w-full h-auto object-contain"
+          className="w-full h-auto object-contain max-h-[90vh]"
+          style={{ 
+            marginBottom: '-1rem',
+            imageRendering: 'crisp-edges',
+            WebkitImageSmoothing: 'antialiased',
+            imageSmoothing: 'high'
+          }}
+          loading="eager"
         />
       </div>
 
       {/* Right side - Login Form */}
-      <div className="w-full sm:w-[400px] lg:w-[420px] flex items-center justify-center md:justify-end p-4 z-10 lg:mr-20">
+      <div className="w-full sm:w-[400px] lg:w-[420px] flex items-center justify-center z-10 lg:ml-[35%]">
         <LoginForm 
           email={email}
           password={password}

@@ -28,7 +28,7 @@ export function LoginForm({
               <img
                 src={logo}
                 alt="Melbo Logo"
-                className="h-29 w-auto"
+                className="h-25 w-auto"
               />
               <h1 className="text-gray-700  font-semibold">Bienvenid@</h1>
               <p className="text-gray-500 text-sm">Inicia sesion para continuar</p>

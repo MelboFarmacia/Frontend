@@ -1,5 +1,5 @@
-import React from 'react';
-import { Lock, Mail, Loader } from 'lucide-react';
+import React, { useState } from 'react';
+import { Lock, Mail, Loader, Eye, EyeOff } from 'lucide-react';
 import logo from '../../../img/LOGO (1).png';
 
 interface LoginFormProps {
@@ -19,67 +19,91 @@ export function LoginForm({
   onSubmit,
   isLoading = false
 }: LoginFormProps) {
+  const [showPassword, setShowPassword] = useState(false);
+  const [isFocused, setIsFocused] = useState<string | null>(null);
+
   return (
-    <div className=" bg-transparent rounded-xl shadow-lg w-[400px]">
-      <div className="flex items-center justify-center">
-        <div className="bg-gray-50 w-full rounded-xl shadow-sm p-10 bg-gradient-to-b from-blue-100 to-white  ">
-          <form onSubmit={onSubmit} className="flex flex-col space-y-6 ">
-            <div className="flex flex-col items-center space-y-5">
-              <img
-                src={logo}
-                alt="Melbo Logo"
-                className="h-25 w-auto"
-              />
-              <h1 className="text-gray-700  font-semibold">Bienvenid@</h1>
-              <p className="text-gray-500 text-sm">Inicia sesion para continuar</p>
-            </div>
-            <div className="space-y-4">
-              <div className="relative">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600 h-5 w-5" />
-                <input
-                  className="w-full pl-10 p-3 bg-gray-50 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-gray-700"
-                  placeholder="Ingresa tu email"
-                  value={email}
-                  onChange={(e) => onEmailChange(e.target.value)}
-                  type="email"
-                  name="email"
-                  required
-                  disabled={isLoading}
-                />
-              </div>
-
-              <div className="relative">
-                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-green-600 h-5 w-5" />
-                <input
-                  className="w-full pl-10 p-3 bg-gray-50 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-green-200 transition-all duration-200 text-gray-700"
-                  placeholder="Contraseña"
-                  type="password"
-                  name="password"
-                  value={password}
-                  onChange={(e) => onPasswordChange(e.target.value)}
-                  required
-                  disabled={isLoading}
-                />
-              </div>
-            </div>
-
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center font-medium shadow-sm hover:shadow-md"
-            >
-              {isLoading ? (
-                <>
-                  <Loader className="animate-spin -ml-1 mr-2 h-5 w-5" />
-                  Signing in...
-                </>
-              ) : (
-                'Sign In'
-              )}
-            </button>
-          </form>
+    <div className="w-full max-w-[400px] mx-auto bg-white p-8 rounded-2xl shadow-lg">
+      <form onSubmit={onSubmit} className="flex flex-col space-y-8">
+        {/* Logo and Welcome Text */}
+        <div className="text-center space-y-4">
+          <div className="flex justify-center">
+            <img
+              src={logo}
+              alt="Melbo Logo"
+              className="h-20 w-auto object-contain transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+          <div className="space-y-1">
+            <h1 className="text-2xl font-semibold text-blue-900">Bienvenid@</h1>
+            <p className="text-sm text-gray-500">Inicia sesión para continuar</p>
+          </div>
         </div>
-      </div>
+
+        {/* Input Fields */}
+        <div className="space-y-4">
+          <div className={`relative transition-all duration-300 ${
+            isFocused === 'email' ? 'transform scale-[1.02]' : ''
+          }`}>
+            <Mail className={`absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 transition-colors duration-300 ${
+              isFocused === 'email' ? 'text-blue-600' : 'text-gray-400'
+            }`} />
+            <input
+              className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-100 focus:border-blue-500 transition-all duration-300 outline-none"
+              placeholder="Ingresa tu email"
+              type="email"
+              value={email}
+              onChange={(e) => onEmailChange(e.target.value)}
+              onFocus={() => setIsFocused('email')}
+              onBlur={() => setIsFocused(null)}
+              disabled={isLoading}
+              required
+            />
+          </div>
+
+          <div className={`relative transition-all duration-300 ${
+            isFocused === 'password' ? 'transform scale-[1.02]' : ''
+          }`}>
+            <Lock className={`absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 transition-colors duration-300 ${
+              isFocused === 'password' ? 'text-blue-600' : 'text-gray-400'
+            }`} />
+            <input
+              className="w-full pl-10 pr-12 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-100 focus:border-blue-500 transition-all duration-300 outline-none"
+              placeholder="Contraseña"
+              type={showPassword ? "text" : "password"}
+              value={password}
+              onChange={(e) => onPasswordChange(e.target.value)}
+              onFocus={() => setIsFocused('password')}
+              onBlur={() => setIsFocused(null)}
+              disabled={isLoading}
+              required
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors duration-300"
+            >
+              {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Login Button */}
+        <button
+          type="submit"
+          disabled={isLoading}
+          className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-lg transform transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+        >
+          {isLoading ? (
+            <>
+              <Loader className="w-5 h-5 animate-spin" />
+              <span>Iniciando sesión...</span>
+            </>
+          ) : (
+            'Iniciar Sesión'
+          )}
+        </button>
+      </form>
     </div>
   );
 }

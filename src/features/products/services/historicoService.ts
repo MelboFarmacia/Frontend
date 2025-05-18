@@ -11,6 +11,10 @@ export const getHistoricoProductos = async (
   type?: string
 ) => {
   const params = new URLSearchParams();
+  const token = localStorage.getItem('token');
+  if (token) {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  }
   if (startDate) params.append('startDate', startDate);
   if (endDate) params.append('endDate', endDate);
   if (name) params.append('name', name);
